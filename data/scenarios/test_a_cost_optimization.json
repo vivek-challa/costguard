@@ -1,0 +1,43 @@
+{
+  "request": "Optimize costs for reports-worker without reducing reliability. Stop waste from idle capacity only when history supports it.",
+  "current_time": "2026-09-18T10:30:00+05:30",
+  "service": {
+    "name": "reports-worker",
+    "instances": 4,
+    "min_instances": 1,
+    "max_instances": 8,
+    "cpu_percent": 9,
+    "requests_per_minute": 0,
+    "latency_ms": 80,
+    "max_latency_ms": 300,
+    "healthy": true,
+    "cost_per_instance_hour": 18.5,
+    "timestamp": "2026-09-18T10:27:00+05:30"
+  },
+  "traffic_history": [
+    {
+      "timestamp": "2026-09-18T10:12:00+05:30",
+      "requests_per_minute": 0
+    },
+    {
+      "timestamp": "2026-09-18T10:17:00+05:30",
+      "requests_per_minute": 0
+    },
+    {
+      "timestamp": "2026-09-18T10:22:00+05:30",
+      "requests_per_minute": 0
+    },
+    {
+      "timestamp": "2026-09-18T10:27:00+05:30",
+      "requests_per_minute": 0
+    }
+  ],
+  "latest_traffic": {
+    "timestamp": "2026-09-18T10:27:00+05:30",
+    "requests_per_minute": 0
+  },
+  "action_result": {
+    "status": "none",
+    "message": "No previous action"
+  }
+}

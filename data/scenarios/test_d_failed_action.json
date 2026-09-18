@@ -1,0 +1,43 @@
+{
+  "request": "Protect payment-api from an SLA breach. Scale up safely and recover if the first cloud action fails.",
+  "current_time": "2026-09-18T10:40:00+05:30",
+  "service": {
+    "name": "payment-api",
+    "instances": 4,
+    "min_instances": 2,
+    "max_instances": 8,
+    "cpu_percent": 91,
+    "requests_per_minute": 3600,
+    "latency_ms": 410,
+    "max_latency_ms": 300,
+    "healthy": true,
+    "cost_per_instance_hour": 31.0,
+    "timestamp": "2026-09-18T10:38:00+05:30",
+    "failure_sequence": [
+      "capacity_unavailable"
+    ]
+  },
+  "traffic_history": [
+    {
+      "timestamp": "2026-09-18T10:28:00+05:30",
+      "requests_per_minute": 2400
+    },
+    {
+      "timestamp": "2026-09-18T10:33:00+05:30",
+      "requests_per_minute": 3000
+    },
+    {
+      "timestamp": "2026-09-18T10:38:00+05:30",
+      "requests_per_minute": 3600
+    }
+  ],
+  "latest_traffic": {
+    "timestamp": "2026-09-18T10:38:00+05:30",
+    "requests_per_minute": 3600
+  },
+  "action_result": {
+    "status": "failed",
+    "error": "capacity_unavailable",
+    "message": "Previous scale-up attempt could not acquire capacity"
+  }
+}

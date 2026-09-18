@@ -1,0 +1,35 @@
+{
+  "request": "Reduce checkout-api cost if it is safe, but do not act on stale or contradictory observations.",
+  "current_time": "2026-09-18T10:35:00+05:30",
+  "service": {
+    "name": "checkout-api",
+    "instances": 4,
+    "min_instances": 2,
+    "max_instances": 8,
+    "cpu_percent": 22,
+    "requests_per_minute": 900,
+    "latency_ms": 120,
+    "max_latency_ms": 300,
+    "healthy": true,
+    "cost_per_instance_hour": 24.0,
+    "timestamp": "2026-09-18T08:00:00+05:30"
+  },
+  "traffic_history": [
+    {
+      "timestamp": "2026-09-18T07:50:00+05:30",
+      "requests_per_minute": 850
+    },
+    {
+      "timestamp": "2026-09-18T08:00:00+05:30",
+      "requests_per_minute": 900
+    }
+  ],
+  "latest_traffic": {
+    "timestamp": "2026-09-18T10:30:00+05:30",
+    "requests_per_minute": 5200
+  },
+  "action_result": {
+    "status": "none",
+    "message": "Cached metric is old; latest traffic feed is newer"
+  }
+}

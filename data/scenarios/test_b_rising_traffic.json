@@ -1,0 +1,39 @@
+{
+  "request": "Orders traffic is increasing. Keep the service within its latency target even if that temporarily increases cost.",
+  "current_time": "2026-09-18T10:35:00+05:30",
+  "service": {
+    "name": "orders-api",
+    "instances": 4,
+    "min_instances": 2,
+    "max_instances": 8,
+    "cpu_percent": 78,
+    "requests_per_minute": 4200,
+    "latency_ms": 260,
+    "max_latency_ms": 300,
+    "healthy": true,
+    "cost_per_instance_hour": 27.75,
+    "timestamp": "2026-09-18T10:32:00+05:30"
+  },
+  "traffic_history": [
+    {
+      "timestamp": "2026-09-18T10:20:00+05:30",
+      "requests_per_minute": 2100
+    },
+    {
+      "timestamp": "2026-09-18T10:26:00+05:30",
+      "requests_per_minute": 3000
+    },
+    {
+      "timestamp": "2026-09-18T10:32:00+05:30",
+      "requests_per_minute": 4200
+    }
+  ],
+  "latest_traffic": {
+    "timestamp": "2026-09-18T10:32:00+05:30",
+    "requests_per_minute": 4200
+  },
+  "action_result": {
+    "status": "none",
+    "message": "No previous action"
+  }
+}
