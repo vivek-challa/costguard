@@ -33,7 +33,7 @@ with st.sidebar:
     st.write("Safety, freshness, execution and verification contain deterministic controls.")
 
 default_request = "Reduce cloud cost without compromising performance, reliability or SLA."
-default_payload = json.dumps(json.loads((scenario_dir/scenarios["test_a_cost_optimization.json"]).read_text()), indent=2)
+default_payload = json.dumps(json.loads((scenario_dir/scenarios["Test A — Cost optimization"]).read_text()), indent=2)
 request = st.text_area("Natural-language request", st.session_state.get("request", default_request), height=90)
 payload_text = st.text_area("Cloud state JSON", st.session_state.get("payload", default_payload), height=430)
 
