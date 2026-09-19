@@ -1,19 +1,40 @@
 {
-  "request": "Optimize costs for reports-worker without reducing reliability. Stop waste from idle capacity only when history supports it.",
+  "request": "Review the current services and reduce unnecessary cost without breaking the latency or availability requirements.",
   "current_time": "2026-09-18T10:30:00+05:30",
-  "service": {
-    "name": "reports-worker",
-    "instances": 4,
-    "min_instances": 1,
-    "max_instances": 8,
-    "cpu_percent": 9,
-    "requests_per_minute": 0,
-    "latency_ms": 80,
-    "max_latency_ms": 300,
-    "healthy": true,
-    "cost_per_instance_hour": 18.5,
-    "timestamp": "2026-09-18T10:27:00+05:30"
-  },
+  "services": [
+    {
+      "service_id": "orders-api",
+      "name": "orders-api",
+      "instances": 6,
+      "min_instances": 2,
+      "max_instances": 8,
+      "cpu_percent": 22,
+      "memory_percent": 41,
+      "requests_per_minute": 1200,
+      "latency_ms": 180,
+      "max_latency_ms": 300,
+      "healthy": true,
+      "cost_per_hour": 18.50,
+      "cost_per_instance_hour": 18.50,
+      "timestamp": "2026-09-18T10:27:00+05:30"
+    },
+    {
+      "service_id": "reports-worker",
+      "name": "reports-worker",
+      "instances": 4,
+      "min_instances": 1,
+      "max_instances": 6,
+      "cpu_percent": 9,
+      "memory_percent": 15,
+      "requests_per_minute": 0,
+      "latency_ms": 80,
+      "max_latency_ms": 900,
+      "healthy": true,
+      "cost_per_hour": 11.00,
+      "cost_per_instance_hour": 11.00,
+      "timestamp": "2026-09-18T10:27:00+05:30"
+    }
+  ],
   "traffic_history": [
     {
       "timestamp": "2026-09-18T10:12:00+05:30",
